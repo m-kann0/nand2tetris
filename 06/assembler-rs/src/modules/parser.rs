@@ -74,6 +74,9 @@ impl Parser {
             CommandType::A_COMMAND => {
                 self.current.replace("@", "")
             },
+            CommandType::L_COMMAND => {
+                self.current.replace("(", "").replace(")", "")
+            }
             _ => panic!(),
         }
     }
